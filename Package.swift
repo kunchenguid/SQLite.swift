@@ -1,4 +1,4 @@
-// swift-tools-version: 6.1
+// swift-tools-version: 5.7
 import PackageDescription
 let applePlatforms: [PackageDescription.Platform] = [.iOS, .macOS, .watchOS, .tvOS, .visionOS]
 
@@ -62,7 +62,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/stephencelis/CSQLite", from: "3.50.4", traits: [.trait(name: "FTS5", condition: .when(traits: ["FTS5"]))]),
-        .package(url: "https://github.com/sqlcipher/SQLCipher.swift", from: "4.11.0")
+        .package(url: "https://github.com/kunchenguid/SQLCipher.swift.git", from: "4.11.0")
     ],
     targets: [target, testTarget],
     swiftLanguageModes: [.v5],
